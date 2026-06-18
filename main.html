@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kansu Hub — Sandhya's Space</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+<div class="floaters" id="flt"></div>
+
+<div class="topbar">
+    <span class="tlogo" onclick="window.location.href='index.html'">🌸 Kansu Hub</span>
+    <div class="cal-strip">
+        <div class="cpill"><span class="cdot" style="background:#e75480"></span>Sandhya · Feb 25 🎂</div>
+        <div class="cpill"><span class="cdot" style="background:#9b59b6"></span>Rijan · Nov 3 🎂</div>
+        <div class="cpill"><span class="cdot" style="background:#f0a500"></span>Us · Sep 11 💕</div>
+    </div>
+</div>
+
+<div class="nav">
+    <div class="ntab on" onclick="switchTab('home',this)">🏠 Home</div>
+    <div class="ntab" onclick="switchTab('gallery',this)">🖼️ Gallery</div>
+    <div class="ntab" onclick="switchTab('memories',this)">💌 Memories</div>
+    <div class="ntab" onclick="switchTab('gifts',this)">🎁 Gifts</div>
+    <div class="ntab" onclick="switchTab('songs',this)">🎵 Songs</div>
+    <div class="ntab" onclick="switchTab('reasons',this)">💝 Reasons</div>
+</div>
+
+<!-- HOME -->
+<div class="sec on" id="sec-home">
+    <div class="timers-stack">
+
+        <div class="tcard c1">
+            <div class="tc-label">💕 time we've been together</div>
+            <div class="tc-sub">since Sep 11, 2025</div>
+            <div class="tc-row">
+                <div class="tunit"><span class="tnum" id="t1d">000</span><span class="tlbl">days</span></div>
+                <span class="tsep">:</span>
+                <div class="tunit"><span class="tnum" id="t1h">00</span><span class="tlbl">hrs</span></div>
+                <span class="tsep">:</span>
+                <div class="tunit"><span class="tnum" id="t1m">00</span><span class="tlbl">min</span></div>
+                <span class="tsep">:</span>
+                <div class="tunit"><span class="tnum" id="t1s">00</span><span class="tlbl">sec</span></div>
+                <div class="hg">
+                    <svg width="36" height="50" viewBox="0 0 40 56">
+                        <path d="M6 3 L34 3 L34 7 L24 22 L24 34 L34 49 L34 53 L6 53 L6 49 L16 34 L16 22 L6 7 Z" stroke="#e75480" stroke-width="2" fill="rgba(255,182,193,0.25)" stroke-linejoin="round"/>
+                        <rect id="hg1t" x="13" y="8" width="14" height="10" rx="2" fill="#e75480" opacity="0.7"/>
+                        <ellipse id="hg1b" cx="20" cy="44" rx="6" ry="3.5" fill="#ffb6c1" opacity="0.8"/>
+                    </svg>
+                    <span class="hg-lbl">Sep 11<br>2025</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tcard c2">
+            <div class="tc-label">🌟 since we first met</div>
+            <div class="tc-sub">May 29, 2026 at 10:47 AM 🥺</div>
+            <div class="tc-row">
+                <div class="tunit"><span class="tnum" id="t2d">000</span><span class="tlbl">days</span></div>
+                <span class="tsep">:</span>
+                <div class="tunit"><span class="tnum" id="t2h">00</span><span class="tlbl">hrs</span></div>
+                <span class="tsep">:</span>
+                <div class="tunit"><span class="tnum" id="t2m">00</span><span class="tlbl">min</span></div>
+                <span class="tsep">:</span>
+                <div class="tunit"><span class="tnum" id="t2s">00</span><span class="tlbl">sec</span></div>
+                <div class="hg">
+                    <svg width="36" height="50" viewBox="0 0 40 56">
+                        <path d="M6 3 L34 3 L34 7 L24 22 L24 34 L34 49 L34 53 L6 53 L6 49 L16 34 L16 22 L6 7 Z" stroke="#9b59b6" stroke-width="2" fill="rgba(216,180,254,0.2)" stroke-linejoin="round"/>
+                        <rect id="hg2t" x="13" y="8" width="14" height="10" rx="2" fill="#9b59b6" opacity="0.7"/>
+                        <ellipse id="hg2b" cx="20" cy="44" rx="6" ry="3.5" fill="#d7b8f0" opacity="0.8"/>
+                    </svg>
+                    <span class="hg-lbl">May 29<br>10:47 AM</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tcard c3">
+            <div class="tc-label">🧡 since we last met</div>
+            <div class="tc-sub">May 30, 2026 at 11:48 AM 🥹</div>
+            <div class="tc-row">
+                <div class="tunit"><span class="tnum" id="t3d">000</span><span class="tlbl">days</span></div>
+                <span class="tsep">:</span>
+                <div class="tunit"><span class="tnum" id="t3h">00</span><span class="tlbl">hrs</span></div>
+                <span class="tsep">:</span>
+                <div class="tunit"><span class="tnum" id="t3m">00</span><span class="tlbl">min</span></div>
+                <span class="tsep">:</span>
+                <div class="tunit"><span class="tnum" id="t3s">00</span><span class="tlbl">sec</span></div>
+                <div class="hg">
+                    <svg width="36" height="50" viewBox="0 0 40 56">
+                        <path d="M6 3 L34 3 L34 7 L24 22 L24 34 L34 49 L34 53 L6 53 L6 49 L16 34 L16 22 L6 7 Z" stroke="#e67e22" stroke-width="2" fill="rgba(253,212,164,0.2)" stroke-linejoin="round"/>
+                        <rect id="hg3t" x="13" y="8" width="14" height="10" rx="2" fill="#e67e22" opacity="0.7"/>
+                        <ellipse id="hg3b" cx="20" cy="44" rx="6" ry="3.5" fill="#f5cba7" opacity="0.8"/>
+                    </svg>
+                    <span class="hg-lbl">May 30<br>11:48 AM</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="divider">♡ ♡ ♡</div>
+    <div class="home-hint">Use the tabs above to explore 🌸</div>
+</div>
+
+<!-- GALLERY -->
+<div class="sec" id="sec-gallery">
+    <div class="sectitle">🖼️ Gallery</div>
+    <div class="gal-note">📷 Tap any cell to add a photo — hover and tap ✕ to remove</div>
+    <div class="gallery-grid" id="galgrid"></div>
+</div>
+
+<!-- MEMORIES -->
+<div class="sec" id="sec-memories">
+    <div class="sectitle">💌 Memories</div>
+    <div class="mem-list" id="memlist"></div>
+    <div class="add-form">
+        <input type="text" id="mem-date" placeholder="Date (e.g. Sep 11, 2025)">
+        <textarea id="mem-text" placeholder="Write your memory here..."></textarea>
+        <button class="addbtn" onclick="addMemory()">＋ Save memory</button>
+    </div>
+</div>
+
+<!-- GIFTS -->
+<div class="sec" id="sec-gifts">
+    <div class="sectitle">🎁 Gifts</div>
+    <div class="gifts-grid" id="giftgrid"></div>
+    <div class="add-form">
+        <input type="text" id="gift-name" placeholder="Gift name (e.g. Keychain 🔑)">
+        <input type="text" id="gift-sub" placeholder="Short note (e.g. matching ones)">
+        <button class="addbtn" onclick="addGift()">＋ Add gift</button>
+    </div>
+</div>
+
+<!-- SONGS -->
+<div class="sec" id="sec-songs">
+    <div class="sectitle">🎵 Our songs</div>
+    <div class="songs-list">
+        <div class="song"><span class="snote">🎵</span><div><div class="stitle">Add your song here</div><div class="sartist">Artist name</div></div></div>
+        <div class="song"><span class="snote">🎵</span><div><div class="stitle">Your favourite song</div><div class="sartist">Artist name</div></div></div>
+        <div class="song"><span class="snote">🎵</span><div><div class="stitle">Her favourite song</div><div class="sartist">Artist name</div></div></div>
+    </div>
+</div>
+
+<!-- REASONS -->
+<div class="sec" id="sec-reasons">
+    <div class="sectitle">💝 Why you are special</div>
+    <div class="reasons-grid" id="reasongrid"></div>
+    <div class="add-form" style="flex-direction:row;gap:8px">
+        <input type="text" id="reason-inp" placeholder="Add a new reason...">
+        <button class="addbtn" style="width:auto;padding:8px 18px;white-space:nowrap" onclick="addReason()">＋ Add</button>
+    </div>
+</div>
+
+<script>
+// ── TAB SWITCHING ──
+function switchTab(id, el) {
+    document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
+    document.querySelectorAll('.ntab').forEach(t => t.classList.remove('on'));
+    document.getElementById('sec-' + id).classList.add('on');
+    el.classList.add('on');
+}
+
+// ── TIMERS ──
+const T1 = new Date('2025-09-11T00:00:00');
+const T2 = new Date('2026-05-29T10:47:00');
+const T3 = new Date('2026-05-30T11:48:00');
+
+function calc(start) {
+    const diff = Math.max(0, new Date() - start);
+    return {
+        d: Math.floor(diff / 86400000),
+        h: Math.floor(diff / 3600000) % 24,
+        m: Math.floor(diff / 60000) % 60,
+        s: Math.floor(diff / 1000) % 60
+    };
+}
+function setTimer(id, t) {
+    document.getElementById(id+'d').textContent = String(t.d).padStart(3,'0');
+    document.getElementById(id+'h').textContent = String(t.h).padStart(2,'0');
+    document.getElementById(id+'m').textContent = String(t.m).padStart(2,'0');
+    document.getElementById(id+'s').textContent = String(t.s).padStart(2,'0');
+}
+function animHg(ti, bi, s) {
+    const p = s / 60;
+    document.getElementById(ti).setAttribute('height', Math.max(2, Math.round(10 * p)));
+    document.getElementById(bi).setAttribute('ry', Math.max(1, Math.round(3.5 * (1 - p) + 1)));
+}
+function tick() {
+    const t1=calc(T1), t2=calc(T2), t3=calc(T3);
+    setTimer('t1',t1); setTimer('t2',t2); setTimer('t3',t3);
+    animHg('hg1t','hg1b',t1.s);
+    animHg('hg2t','hg2b',t2.s);
+    animHg('hg3t','hg3b',t3.s);
+}
+tick(); setInterval(tick, 1000);
+
+// ── GALLERY ──
+let photos = JSON.parse(localStorage.getItem('kansuphotos') || '[]');
+function buildGallery() {
+    const grid = document.getElementById('galgrid');
+    grid.innerHTML = '';
+    for (let i = 0; i < 6; i++) {
+        const cell = document.createElement('div');
+        cell.className = 'gcell';
+        if (photos[i]) {
+            const img = document.createElement('img');
+            img.src = photos[i];
+            cell.appendChild(img);
+            const x = document.createElement('button');
+            x.className = 'xbtn'; x.textContent = '✕';
+            x.onclick = e => {
+                e.stopPropagation();
+                photos[i] = null;
+                localStorage.setItem('kansuphotos', JSON.stringify(photos));
+                buildGallery();
+            };
+            cell.appendChild(x);
+        } else {
+            cell.innerHTML = '<span class="gi">📷</span><span>Add photo</span>';
+            const inp = document.createElement('input');
+            inp.type = 'file'; inp.accept = 'image/*'; inp.className = 'file-inp';
+            inp.onchange = e => {
+                const f = e.target.files[0]; if (!f) return;
+                const r = new FileReader();
+                r.onload = ev => {
+                    photos[i] = ev.target.result;
+                    localStorage.setItem('kansuphotos', JSON.stringify(photos));
+                    buildGallery();
+                };
+                r.readAsDataURL(f);
+            };
+            cell.appendChild(inp);
+            cell.onclick = () => inp.click();
+        }
+        grid.appendChild(cell);
+    }
+}
+buildGallery();
+
+// ── MEMORIES ──
+let mems = JSON.parse(localStorage.getItem('kansuMems') || JSON.stringify([
+    {date:'Aug 2025', text:'When we first started talking 💬'},
+    {date:'Sep 11, 2025', text:'The day we became us 🌹'},
+    {date:'May 29, 2026 · 10:47 AM', text:'The first time we finally met 🥺✨'},
+    {date:'May 30, 2026 · 11:48 AM', text:'The last time we met — until next time 🧡'}
+]));
+function renderMems() {
+    const list = document.getElementById('memlist');
+    list.innerHTML = '';
+    mems.forEach((m, i) => {
+        const d = document.createElement('div');
+        d.className = 'mitem';
+        d.innerHTML = `<div class="mdot"></div><div style="flex:1"><div class="mdate">${m.date}</div><div class="mtext">${m.text}</div></div><button class="mdel" onclick="deleteMem(${i})">✕</button>`;
+        list.appendChild(d);
+    });
+}
+renderMems();
+function addMemory() {
+    const date = document.getElementById('mem-date').value.trim();
+    const text = document.getElementById('mem-text').value.trim();
+    if (!date || !text) return;
+    mems.push({date, text});
+    localStorage.setItem('kansuMems', JSON.stringify(mems));
+    renderMems();
+    document.getElementById('mem-date').value = '';
+    document.getElementById('mem-text').value = '';
+}
+function deleteMem(i) {
+    mems.splice(i, 1);
+    localStorage.setItem('kansuMems', JSON.stringify(mems));
+    renderMems();
+}
+
+// ── GIFTS ──
+let gifts = JSON.parse(localStorage.getItem('kansuGifts') || JSON.stringify([
+    {name:'Flowers 💐', sub:'surprise bouquet', photo:null},
+    {name:'Love letter 📖', sub:'handwritten', photo:null},
+    {name:'Chocolates 🍫', sub:'her favourite', photo:null},
+    {name:'Plushie 🧸', sub:'to hug at night', photo:null},
+    {name:'Photo book 📸', sub:'printed memories', photo:null},
+    {name:'Keychain 🔑', sub:'matching ones', photo:null}
+]));
+function renderGifts() {
+    const grid = document.getElementById('giftgrid');
+    grid.innerHTML = '';
+    gifts.forEach((g, i) => {
+        const c = document.createElement('div');
+        c.className = 'gcard';
+        const photoHtml = g.photo
+            ? `<img class="gift-photo" src="${g.photo}">`
+            : `<span class="gicon">🎁</span>`;
+        c.innerHTML = `
+            ${photoHtml}
+            <div class="gname">${g.name}</div>
+            <div class="gsub">${g.sub}</div>
+            <div class="gift-add-photo" onclick="triggerGiftPhoto(${i})">${g.photo ? '📷 Change photo' : '📷 Add photo'}</div>
+            <button class="gdel" onclick="deleteGift(${i})">✕</button>
+        `;
+        const inp = document.createElement('input');
+        inp.type = 'file'; inp.accept = 'image/*';
+        inp.className = 'file-inp'; inp.id = 'ginp' + i;
+        inp.onchange = e => {
+            const f = e.target.files[0]; if (!f) return;
+            const r = new FileReader();
+            r.onload = ev => {
+                gifts[i].photo = ev.target.result;
+                localStorage.setItem('kansuGifts', JSON.stringify(gifts));
+                renderGifts();
+            };
+            r.readAsDataURL(f);
+        };
+        c.appendChild(inp);
+        grid.appendChild(c);
+    });
+}
+function triggerGiftPhoto(i) { document.getElementById('ginp' + i).click(); }
+function addGift() {
+    const name = document.getElementById('gift-name').value.trim();
+    const sub  = document.getElementById('gift-sub').value.trim();
+    if (!name) return;
+    gifts.push({name, sub: sub || '', photo: null});
+    localStorage.setItem('kansuGifts', JSON.stringify(gifts));
+    renderGifts();
+    document.getElementById('gift-name').value = '';
+    document.getElementById('gift-sub').value  = '';
+}
+function deleteGift(i) {
+    gifts.splice(i, 1);
+    localStorage.setItem('kansuGifts', JSON.stringify(gifts));
+    renderGifts();
+}
+renderGifts();
+
+// ── REASONS ──
+let reasons = JSON.parse(localStorage.getItem('kansuReasons') || JSON.stringify([
+    'Your smile makes everything better instantly',
+    'You care about everyone around you so deeply',
+    'You make ordinary moments feel magical',
+    'You are the kindest person I have ever met',
+    'Every day with you is my favourite day',
+    'You are home to me 🏡'
+]));
+function renderReasons() {
+    const grid = document.getElementById('reasongrid');
+    grid.innerHTML = '';
+    reasons.forEach((r, i) => {
+        const c = document.createElement('div');
+        c.className = 'rcard';
+        c.innerHTML = `<button class="rdel" onclick="deleteReason(${i})">✕</button><div class="rnum">0${i < 9 ? i+1 : i+1}</div><div class="rtxt">${r}</div>`;
+        grid.appendChild(c);
+    });
+}
+function addReason() {
+    const val = document.getElementById('reason-inp').value.trim();
+    if (!val) return;
+    reasons.push(val);
+    localStorage.setItem('kansuReasons', JSON.stringify(reasons));
+    renderReasons();
+    document.getElementById('reason-inp').value = '';
+}
+function deleteReason(i) {
+    reasons.splice(i, 1);
+    localStorage.setItem('kansuReasons', JSON.stringify(reasons));
+    renderReasons();
+}
+renderReasons();
+
+// ── FLOATERS ──
+const emojis = ['🐱','🌸','💕','✨','💖','🌷','🐾','🍓','💗','🐣'];
+const flt = document.getElementById('flt');
+for (let i = 0; i < 14; i++) {
+    const f = document.createElement('div');
+    f.className = 'fl';
+    f.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+    f.style.left = Math.random() * 95 + '%';
+    f.style.fontSize = (1 + Math.random() * 1.1) + 'rem';
+    f.style.animationDuration = (7 + Math.random() * 9) + 's';
+    f.style.animationDelay = (Math.random() * 12) + 's';
+    flt.appendChild(f);
+}
+</script>
+</body>
+</html>

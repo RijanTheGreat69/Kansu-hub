@@ -1,0 +1,98 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: linear-gradient(135deg, #ff758c 0%, #ff9ec4 100%);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    position: relative;
+}
+
+.logo-area { position: absolute; top: 28px; left: 36px; z-index: 20; }
+.web-title { font-size: 2rem; font-weight: 800; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+
+.heart-bg-container { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.heart-particle { position: absolute; bottom: -40px; font-size: 1.4rem; opacity: 0; animation: floatHearts 5.5s linear infinite; }
+.heart-particle:nth-child(1) { left: 8%;  animation-delay: 0s;   }
+.heart-particle:nth-child(2) { left: 25%; animation-delay: 1.4s; }
+.heart-particle:nth-child(3) { left: 50%; animation-delay: 0.7s; }
+.heart-particle:nth-child(4) { left: 70%; animation-delay: 3s;   }
+.heart-particle:nth-child(5) { left: 90%; animation-delay: 2s;   }
+@keyframes floatHearts {
+    0%   { transform: translateY(0);      opacity: 0; }
+    10%  { opacity: 0.6; }
+    90%  { opacity: 0.6; }
+    100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+/* cupid.png faces RIGHT by default this time, so:
+   left-side  → scaleX(1)  → faces right → toward center ✓
+   right-side → scaleX(-1) → faces left  → toward center ✓ */
+.cupid-wrapper { position: absolute; top: 36%; width: 110px; z-index: 5; }
+.left-side  { left: 6%; }
+.right-side { right: 6%; }
+.cupid-img  { width: 110px; height: auto; display: block; }
+.left-side  .cupid-img { transform: scaleX(1);  }
+.right-side .cupid-img { transform: scaleX(-1); }
+
+.shot-arrow { position: absolute; top: 12px; font-size: 2rem; opacity: 0; pointer-events: none; z-index: 6; }
+.left-side  .shot-arrow { left: -8px; }
+.right-side .shot-arrow { left: -8px; }
+
+#open-trigger { display: none; }
+
+#open-trigger:checked ~ .left-side .cupid-img  { animation: recoilLeft  0.45s ease-out forwards; }
+#open-trigger:checked ~ .right-side .cupid-img { animation: recoilRight 0.45s ease-out forwards; }
+#open-trigger:checked ~ .left-side .shot-arrow  { animation: arrowLeft  1s ease-out 0.15s forwards; }
+#open-trigger:checked ~ .right-side .shot-arrow { animation: arrowRight 1s ease-out 0.15s forwards; }
+
+@keyframes recoilLeft {
+    0%,100% { transform: scaleX(1) translateX(0);    }
+    35%     { transform: scaleX(1) translateX(-14px); }
+}
+@keyframes recoilRight {
+    0%,100% { transform: scaleX(-1) translateX(0);    }
+    35%     { transform: scaleX(-1) translateX(14px); }
+}
+@keyframes arrowLeft {
+    0%   { opacity: 0; transform: translateX(0);                        }
+    15%  { opacity: 1;                                                   }
+    100% { opacity: 0; transform: translateX(380px) translateY(-14px);  }
+}
+@keyframes arrowRight {
+    0%   { opacity: 0; transform: translateX(0);                        }
+    15%  { opacity: 1;                                                   }
+    100% { opacity: 0; transform: translateX(-380px) translateY(-14px); }
+}
+
+.center-stage { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; }
+.love-bird    { position: relative; width: 90px; height: 56px; }
+
+.bird-body { width: 90px; height: 50px; background: #fff; border-radius: 50px; position: absolute; z-index: 12; box-shadow: 0 5px 12px rgba(0,0,0,0.1); }
+.eye  { position: absolute; top: 14px; right: 22px; width: 6px; height: 6px; background: #2d3436; border-radius: 50%; z-index: 13; }
+.beak { position: absolute; right: -13px; top: 17px; width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 14px solid #ff9f43; z-index: 13; }
+
+.wing       { position: absolute; background: #fff; border-radius: 50%; transform-origin: bottom center; }
+.left-wing  { width: 38px; height: 62px; top: -43px; left: 18px; animation: flapLeft  0.19s ease-in-out infinite alternate; z-index: 11; }
+.right-wing { width: 38px; height: 62px; top: -39px; left: 28px; animation: flapRight 0.19s ease-in-out infinite alternate; z-index: 13; }
+@keyframes flapLeft  { 0% { transform: rotate(-24deg); } 100% { transform: rotate(34deg);  } }
+@keyframes flapRight { 0% { transform: rotate(24deg);  } 100% { transform: rotate(-34deg); } }
+
+.envelope-wrapper  { position: absolute; bottom: -58px; right: -44px; z-index: 15; }
+.envelope          { position: relative; display: block; width: 130px; height: 86px; cursor: pointer; }
+.envelope-back     { position: absolute; inset: 0; background: #d4ac0d; border-radius: 3px; z-index: 1; }
+.envelope-front    { position: absolute; width: 0; height: 0; border-left: 65px solid #f4d03f; border-right: 65px solid #f4d03f; border-bottom: 43px solid #f5b041; border-top: 43px solid transparent; top: 0; left: 0; z-index: 3; }
+.envelope-top-flap { position: absolute; width: 0; height: 0; border-left: 65px solid transparent; border-right: 65px solid transparent; border-top: 46px solid #f1c40f; top: 0; left: 0; z-index: 4; transform-origin: top center; transition: transform 0.4s ease-in-out, z-index 0.2s 0.2s; }
+.letter-card       { position: absolute; width: 120px; height: 76px; background: #fff; left: 5px; top: 5px; border-radius: 4px; display: flex; justify-content: center; align-items: center; z-index: 2; transition: transform 0.5s ease-in-out 0.4s; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.letter-text       { font-size: 0.62rem; font-weight: 700; color: #e74c3c; text-align: center; line-height: 1.5; }
+
+#open-trigger:checked ~ .center-stage .envelope-top-flap { transform: rotateX(180deg); z-index: 1; }
+#open-trigger:checked ~ .center-stage .letter-card        { transform: translateY(-56px); z-index: 5; }
+
+.open-hint { position: absolute; bottom: 68px; left: 50%; transform: translateX(-50%); z-index: 20; background: rgba(255,255,255,0.22); border: 1.5px solid rgba(255,255,255,0.65); border-radius: 22px; padding: 8px 24px; color: #fff; font-size: 0.85rem; font-weight: 600; cursor: pointer; white-space: nowrap; text-shadow: 0 1px 3px rgba(0,0,0,0.15); transition: background 0.2s; }
+.open-hint:hover { background: rgba(255,255,255,0.38); }
+
+.enter-link-area { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 20; }
+.enter-btn { color: #fff; font-size: 0.82rem; font-weight: 700; text-decoration: none; letter-spacing: 0.05em; opacity: 0.88; text-shadow: 0 1px 4px rgba(0,0,0,0.2); border-bottom: 1.5px solid rgba(255,255,255,0.5); padding-bottom: 2px; transition: opacity 0.2s; }
+.enter-btn:hover { opacity: 1; }
